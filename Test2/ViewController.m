@@ -7,6 +7,9 @@
 //
 
 #import "ViewController.h"
+#import "TMapView.h"
+
+#define APP_KEY @"d273f335-235a-3b7d-83c2-6344fd4120e1"
 
 @interface ViewController ()
 
@@ -18,6 +21,9 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    TMapView *mapView = [[TMapView alloc]initWithFrame:self.view.bounds];
+    [mapView setSKPMapApiKey:APP_KEY];
+    [self.view addSubview:mapView];
 }
 
 - (void)didReceiveMemoryWarning
